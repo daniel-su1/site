@@ -29,6 +29,6 @@ svg{
     fill: white;
 }
 
-.link:hover{
+svg:hover{
     fill: aqua;
 }
