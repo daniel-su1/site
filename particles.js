@@ -1,5 +1,5 @@
 tsParticles.load("particles", {
-    fpsLimit: 60,
+    fpsLimit: 165,
     fullScreen: {
       enable: false,
       zIndex: 0
