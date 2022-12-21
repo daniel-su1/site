@@ -11,6 +11,8 @@ body {
     box-sizing: border-box;
     position: relative;
     height: 100vh;
+    z-index: 10;
+    display: inline-block;
 }
 
 .intro h1 {
@@ -49,9 +51,18 @@ svg:hover {
     color: rgb(22, 77, 196);
 }
 
+.skills{
+    height: 100vh;
+}
+.skills h1{
+    color: rgb(22, 77, 196);
+}
+.skills p{
+    color: white;
+}
+
 #intro-content {
-    z-index: 10;
-    display: inline-block;
+
     
 }
 #content{
@@ -64,8 +75,8 @@ svg:hover {
     background-color: rgb(218, 6, 6);
 }
 #particles {
-
     height: 100vh;
+    width: 100vw;
     position:absolute;
     z-index: -999;
 
