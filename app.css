@@ -1,5 +1,3 @@
-
-
 body {
     background-color: #070707;
     font-family: 'Inter', --apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Cantarell, "Helvetica Neue", sans-serif
@@ -51,29 +49,51 @@ svg:hover {
     color: rgb(22, 77, 196);
 }
 
-.skills{
+.skills {
     height: 100vh;
+    margin: auto;
+    margin-top: 10%;
+    max-width: 60em
 }
-.skills h1{
-    color: rgb(22, 77, 196);
+
+.skills h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
 }
-.skills p{
+
+.skills-rect p {
     color: white;
 }
 
-#intro-content {
-
-    
+.skills-rect{
+    display: flex;
+    border-color: rgb(22, 77, 196);
+    border-style: solid;
+    border-width: thick;
+    border-radius: 15px;
 }
-.content{
+
+.icons-container{
+    margin:auto;
+    padding: 50px;
+}
+
+.skills-rect img{
+    width: 85px;
+    height: 85px;
+    padding: 25px;
+}
+
+.content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.test{
+.test {
     background-color: rgb(218, 6, 6);
 }
+
 #particles {
     box-sizing: border-box;
     height: 100vh;
@@ -89,13 +109,14 @@ svg:hover {
 .fade-in.visible {
     /* add your fade-in animation here */
     animation: fade-in 0.5s ease-in;
-  }
-  
-  @keyframes fade-in {
+}
+
+@keyframes fade-in {
     from {
-      opacity: 0;
+        opacity: 0;
     }
+
     to {
-      opacity: 1;
+        opacity: 1;
     }
-  }
+}
