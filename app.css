@@ -53,16 +53,14 @@ svg:hover {
     height: 100vh;
     margin: auto;
     margin-top: 10%;
+    width: 100%;
     max-width: 60em
+
 }
 
 .skills h1 {
     color: #ffffff;
     font-size: 2.5rem;
-}
-
-.skills-rect p {
-    color: white;
 }
 
 .skills-rect{
@@ -76,6 +74,14 @@ svg:hover {
 .icons-container{
     margin:auto;
     padding: 50px;
+    width: 100%;
+}
+.icons-row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 .skills-rect img{
@@ -103,6 +109,13 @@ svg:hover {
     z-index: -999;
     margin-top: -100vh;
 
+    /* box-sizing: border-box;
+    height: 200vh;
+    width: 100%;
+    position: relative;
+    bottom: -200vh;
+    z-index: -999;
+    margin-top: -200vh; */
 
 }
 
