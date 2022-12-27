@@ -92,6 +92,11 @@ a {
 .skills-rect img{
     height: 85px;
     padding: 30px;
+    transition-duration: 0.3s;
+}
+
+.skills-rect img:hover{
+    height: 110px;
 }
 
 .projects-container{
@@ -185,12 +190,11 @@ footer a svg{
     height: 40px;
     width: 40px;
     fill: black;
+    transition-duration: 0.4s;
 }
 
 footer a svg:hover{
     fill: rgb(22, 77, 196);
-    transition-duration: 0.4s;
-
 }
 body {
     margin:0;
