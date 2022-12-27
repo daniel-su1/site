@@ -171,7 +171,6 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto;
     margin-top: 5%;
     padding-top: 3%;
     padding-bottom: 3%;
@@ -193,3 +192,6 @@ footer a svg:hover{
     transition-duration: 0.4s;
 
 }
+body {
+    margin:0;
+  }
