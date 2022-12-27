@@ -143,6 +143,7 @@ svg:hover {
 .fade-in.visible {
     /* add your fade-in animation here */
     animation: fade-in 0.5s ease-in;
+    animation-delay: 0.1s;
 }
 
 footer{
