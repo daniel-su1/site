@@ -14,16 +14,19 @@ body {
 }
 
 .intro h1 {
-    color: rgb(22, 77, 196);
+    color: rgb(255, 255, 255);
     font-size: 4rem;
     max-width: 60%;
     align-content: center;
 
 }
+h1 span{
+    color: rgb(22, 77, 196);
+}
 
 .intro p {
     font-weight: 400;
-    color: aliceblue;
+    color: rgb(255, 255, 255);
     max-width: 60%;
 
 
@@ -58,7 +61,7 @@ svg:hover {
 
 }
 
-.body-section h1 {
+.body-section h2 {
     color: #ffffff;
     font-size: 2.5rem;
 }
@@ -89,9 +92,22 @@ svg:hover {
 }
 
 .skills-rect img{
-    width: 85px;
     height: 85px;
     padding: 30px;
+}
+
+.projects-rect{
+    display: flex;
+    border-color: rgb(22, 77, 196);
+    border-style: solid;
+    border-width: thick;
+    border-radius: 15px;
+}
+.projects-rect h3{
+    color: white;
+    font-weight: 400;
+    padding-left: 4em;
+
 }
 
 .content {
