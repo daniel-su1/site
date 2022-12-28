@@ -105,18 +105,36 @@ a {
 }
 
 .projects-rect{
+    width: 20em;
+    height: 20em;
     display: flex;
-    border-color: rgb(22, 77, 196);
-    border-style: solid;
-    border-width: thick;
     border-radius: 15px;
+    background-color: #101010;
+    flex-direction: column;
+    transition-duration: 0.4s;
+}
+.projects-rect:hover{
+    background-color: rgb(22, 77, 196);
+    transform: translate(0,-15px);
 }
 .projects-rect h3{
     color: white;
     font-weight: 400;
-    padding-left: 4em;
-
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 2em;
 }
+.projects-rect div{
+    margin-top: auto;
+    color: white;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+.tags{
+    color: rgb(158, 158, 158);
+    font-style: italic;
+}
+
 
 .content {
     display: flex;
