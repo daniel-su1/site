@@ -220,7 +220,7 @@ footer p{
 footer a svg{
     height: 40px;
     width: 40px;
-    fill: black;
+    fill: rgb(102, 102, 102);
     transition-duration: 0.4s;
 }
 
