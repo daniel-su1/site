@@ -7,27 +7,38 @@ const scrollTop = window.scrollY;
 // get the window's height
 const windowHeight = window.innerHeight;
 
-async function changeClass(){
-  elements.forEach(async (element, index) => {
-    // set the element's initial opacity to 0
+function changeElement(element, delay) {
+  const elementTop = element.getBoundingClientRect().top;
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (elementTop <= windowHeight) {
+        element.classList.add('visible');
+        element.onanimationend = () => { element.classList.remove('hidden'); }
+      }
+      resolve();
+    }, delay)
 
-    // get the element's distance from the top of the page
-    const elementTop = element.getBoundingClientRect().top;
-  
-    // if the element is within the window's viewable area, add the "visible" class to the element
-    if (elementTop <= windowHeight) {
-      element.classList.add('visible');
-      document.addEventListener('animationend', () => {
-        element.classList.remove('hidden');
-      })
+  })
+}
+
+async function changeClass() {
+  for (let i = 0; i != elements.length; i++) {
+
+    if(i>=4 && i<=17){
+      await changeElement(elements[i], 50);
     }
-    
+    else{
+      await changeElement(elements[i], 150);
+    }
+  }
+
+  // get the element's distance from the top of the page
 
 
 
-  });
+
   // loop through each element with the "fade-in" class
-  
+
 }
 
 // listen for the scroll event and run the above script whenever the user scrolls
