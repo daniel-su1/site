@@ -99,26 +99,30 @@ a {
     transition-duration: 0.3s;
 }
 
-.skills-rect img:hover{
-    height: 110px;
-}
-
 .projects-container{
-    display: flex;
-    justify-content: flex-start;
+display: flex;
+flex-wrap: wrap;
+align-items: flex-start;
+justify-content: space-between;
 }
 
 .projects-rect{
-    width: 20em;
-    height: 20em;
-    display: flex;
+    width: 19em;
     border-radius: 15px;
+    display: flex;
     background-color: #101010;
     flex-direction: column;
     transition-duration: 0.4s;
-    margin-right: 2em;
-
+    border-width: 2px;
+    border-color: #2c2c2c;
+    border-style: solid;
+    min-height: 20em;
 }
+
+.projects-rect img{
+    border-radius: 15px 15px 0px 0px;
+}
+
 .projects-rect:hover{
     background-color: rgb(22, 77, 196);
     transform: translate(0,-15px);
@@ -147,7 +151,7 @@ a {
 .content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .test {
