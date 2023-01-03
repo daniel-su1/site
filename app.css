@@ -74,6 +74,9 @@ a {
     display: flex;
     border-radius: 15px;
     background-color: #101010;
+    border-width: 2px;
+    border-color: #2c2c2c;
+    border-style: solid;
 }
 
 .icons-container{
