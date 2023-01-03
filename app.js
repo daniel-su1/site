@@ -1,6 +1,7 @@
 // select all elements that have the "fade-in" class
 const elements = document.querySelectorAll('.fade-in');
 
+
 // get the window's current scroll position
 const scrollTop = window.scrollY;
 
@@ -22,6 +23,7 @@ function changeElement(element, delay) {
 }
 
 async function changeClass() {
+  console.log(window.scrollY);
   for (let i = 0; i != elements.length; i++) {
 
     if(i>=4 && i<=17){
@@ -44,9 +46,20 @@ async function changeClass() {
 // listen for the scroll event and run the above script whenever the user scrolls
 
 
+function changeParticlesOpacity(){
+  let opacityLayer = document.querySelector('#opacity-layer')
+  if(window.scrollY>450){
+    opacityLayer.style.opacity = (window.scrollY-450)/100
+  }
+  else{
+    opacityLayer.style.opacity = 0;
 
+  }
+
+}
 
 
 document.addEventListener('scroll', changeClass);
+document.addEventListener('scroll', changeParticlesOpacity)
 changeClass();
 
