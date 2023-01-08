@@ -49,7 +49,7 @@ async function changeClass() {
 function changeParticlesOpacity(){
   let opacityLayer = document.querySelector('#opacity-layer')
   if(window.scrollY>450){
-    opacityLayer.style.opacity = (window.scrollY-450)/200
+    opacityLayer.style.opacity = (window.scrollY-450)/300
   }
   else{
     opacityLayer.style.opacity = 0;
