@@ -33,18 +33,16 @@ async function changeClass() {
       await changeElement(elements[i], 150);
     }
   }
-
-  // get the element's distance from the top of the page
-
-
-
-
-  // loop through each element with the "fade-in" class
-
 }
 
-// listen for the scroll event and run the above script whenever the user scrolls
-
+function getTopVisibleElement(){
+  for (let i =0; i!= elements.length; i++){
+    if(elements[i].getBoundingClientRect().top <= windowHeight && elements[i].getBoundingClientRect().top > 0){
+      break;
+    }
+    return i;
+  }
+}
 
 function changeParticlesOpacity(){
   let opacityLayer = document.querySelector('#opacity-layer')
