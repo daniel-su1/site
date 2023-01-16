@@ -23,7 +23,8 @@ function changeElement(element, delay) {
 }
 
 async function changeClass() {
-  console.log(window.scrollY);
+  console.log("scroll " + window.scrollY);
+  console.log("height "+ window.innerHeight);
   for (let i = 0; i != elements.length; i++) {
 
     if(i>=4 && i<=17){
@@ -47,7 +48,7 @@ function getTopVisibleElement(){
 function changeParticlesOpacity(){
   let opacityLayer = document.querySelector('#opacity-layer')
   if(window.scrollY>450){
-    opacityLayer.style.opacity = (window.scrollY-450)/200
+    opacityLayer.style.opacity = (window.scrollY-450)/((window.innerHeight*2.5)/10)
   }
   else{
     opacityLayer.style.opacity = 0;
