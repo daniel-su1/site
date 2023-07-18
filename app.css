@@ -200,26 +200,10 @@ justify-content: space-between;
     background-color: #070707;
 }
 
-
-
-@keyframes fade-in {
-    from {
-        transform: translate(0px, 40px);
-    }
-
-    to {
-        opacity: 1;
-
-    }
-}
-.hidden{
+.fade-in-element {
     opacity: 0;
-}
-
-.fade-in.visible {
-    animation: fade-in 0.5s ease-in;
-    animation-delay: 0.1s;
-}
+    transition: opacity 1s;
+  }
 
 footer{
     height: 5em;
