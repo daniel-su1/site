@@ -3,6 +3,7 @@ let observer = new IntersectionObserver((entries, observer) => {
     // If the element is in viewport
     if (entry.isIntersecting) {
       entry.target.style.opacity = "1";
+      entry.target.style.transform = "translate(0, 0)";
       // Once the element is in view, there's no need to keep observing it
       observer.unobserve(entry.target);
     }
