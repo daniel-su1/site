@@ -236,3 +236,28 @@ footer a svg:hover{
 body {
     margin:0;
   }
+
+  /* This will change the scrollbar for the whole page. */
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #070707;       /* color of the tracking area */
+    border-radius: 10px;       /* roundness of tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #101010;     /* color of the scroll thumb */
+    border-radius: 20px;            /* roundness of the scroll thumb */
+    border: 2px solid #1a1a1d;     /* creates padding around scroll thumb */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #4e4e52;       /* color of the scroll thumb when hovering */
+}
+
+body {
+    scrollbar-width: thin;
+    scrollbar-color: #4e4e52 #1a1a1d;
+}
