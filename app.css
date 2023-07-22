@@ -190,7 +190,7 @@ a {
 #opacity-layer {
   box-sizing: border-box;
   height: 100vh;
-  width: 100%;
+
   position: relative;
   top: 100vh;
   margin-top: -100vh;
@@ -267,6 +267,89 @@ body {
   scrollbar-color: #4e4e52 #1a1a1d;
 }
 
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 900px and up) */
+@media only screen and (max-width: 965px) {
+  .projects-container {
+  margin: auto;
+}
+  .body-section h2 {
+  font-size: 2.25rem;
+  align-self: flex-start;
+  margin-left: 2rem;
+}
+.skills-rect {
+    margin-left: 3em;
+    margin-right: 3em;
+  }
+  .icons-container {
+    margin: auto;
+    padding: 10px;
+
+  }
+  .skills-rect img {
+  height: 70px;
+  padding: 22px;
+}
+
+.intro h1 {
+  font-size: 3.6rem;
+  max-width: 60%;
+  align-content: center;
+}
+.projects-rect {
+  width: 16em;
+  min-height: 22em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-top: 1em;
+}
+.projects-rect p{
+  font-size: 0.9rem;
+}
+
+.projects-rect img {
+  border-radius: 15px 15px 0px 0px;
+  height: 10em;
+  object-fit: cover;
+}
+.projects-rect h3 {
+  color: white;
+  font-weight: 400;
+  margin-left: 1.05em;
+  margin-right: 1.2em;
+  margin-top: 1.4em;
+}
+.projects-rect div {
+  color: white;
+  margin-left: 1.2em;
+  margin-right: 1.2em;
+}
+.divider {
+  height: 2px;
+  width: 16em;
+  background-color: #164dc4;
+  transform: translateY(51px);
+  margin-left: 2em;
+}
+}
+
+/* Large devices (laptops/desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  ...;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  ...;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .skills-rect {
@@ -325,24 +408,38 @@ body {
   color: white;
   margin-right: 0.5em;
 }
+
+.projects-rect {
+  width: 18em;
+ 
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-top: 1em;
+}
+.projects-rect p{
+  font-size: 0.9rem;
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  ...;
+.projects-rect img {
+  border-radius: 15px 0px 15px 0px;
+  height: 6em;
+  width: 9em;
+  object-fit: cover;
+}
+.projects-rect h3 {
+  color: white;
+  font-weight: 400;
+  margin-left: 1.05em;
+  margin-right: 1.2em;
+  margin-top: 1em;
+}
+.projects-rect div {
+  color: white;
+  margin-left: 1.2em;
+  margin-right: 1.2em;
+}
 }
 
-/* Medium devices (landscape tablets, 900px and up) */
-@media only screen and (min-width: 900px) {
-  ...;
-}
-
-/* Large devices (laptops/desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  ...;
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  ...;
-}
+/* * {
+  outline: 1px solid red;
+} */
