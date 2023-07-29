@@ -1,4 +1,4 @@
-# Daniel's Personal Website
+# Personal Website
 
 This is the source code for my personal website, deployed on [Netlify](https://www.netlify.com/) at [danielsu.ca](http://danielsu.ca).
 
