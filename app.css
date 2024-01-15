@@ -54,8 +54,8 @@ a {
   height: auto;
   margin: auto;
   margin-top: 5%;
-
   max-width: 60em;
+  position:relative;
 }
 
 .body-section h2 {
@@ -134,10 +134,10 @@ a {
 }
 .projects-rect h3 {
   color: white;
-  font-weight: 400;
   margin-left: 1.8em;
   margin-right: 2em;
   margin-top: 2em;
+  font-weight: 580;
 }
 .projects-rect div {
   margin-top: auto;
@@ -168,6 +168,84 @@ a {
   transform: translateY(56px);
   margin-left: 2em;
 }
+
+.timeline {
+  position: absolute;
+    left: 50%;
+    height: 100%;
+  width: 2px;
+  background-color: #164dc4;
+  /* transform: translateY(51px); */
+  margin:auto;
+}
+
+
+.experience-rect {
+  width: 40%; /* Width of the boxes */
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  background-color: #101010;
+  transition-duration: 0.4s;
+  border-width: 2px;
+  border-color: #2c2c2c;
+  border-style: solid;
+  margin-top: 4em;
+}
+
+.experience-rect.right {
+  margin-left: 57%;
+}
+.experience-rect-content{
+  display: flex;
+}
+
+.experience-rect-content div {
+  margin-left: 0.5em;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.experience-rect-content img {
+  border-radius: 1.5em;
+  height: 3em;
+  width: 3em;
+  margin: 1em;
+  object-fit: cover;
+}
+
+.experience-rect:hover {
+  background-color: rgb(22, 77, 196);
+}
+.experience-rect-content h3 {
+  color: white;
+  font-weight: 620;
+  font-size: 15pt;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.experience-rect-content h4 {
+  font-weight: 400;
+  margin-top: 2px;
+  margin-bottom: 0;
+  color: white;
+  font-style: normal;
+}
+.experience-rect-content h5 {
+  color: white;
+  font-weight: 400;
+  margin-top: 1px;
+  margin-bottom: 0;
+  color: rgb(158, 158, 158);
+  font-style: italic;
+  font-size: 12pt;
+}
+
+
+
+
+
+
 
 #particles {
   box-sizing: border-box;
@@ -338,11 +416,21 @@ body {
   transform: translateY(51px);
   margin-left: 2em;
 }
+
 }
 
 /* Large devices (laptops/desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  ...;
+@media only screen and (min-width: 60em) {
+  .experience-rect::after {
+    content: '';
+    position:absolute;
+    width: 72px;
+    height: 2px;
+    background-color: #164dc4;
+    z-index: 1;
+    right: 480px;
+    transform: translateY(40px);
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
