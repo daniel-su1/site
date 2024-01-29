@@ -133,7 +133,7 @@ a {
 
 .projects-rect img {
   border-radius: 15px 15px 0px 0px;
-  height: 12em;
+  height: 10em;
   object-fit: cover;
 }
 
@@ -390,22 +390,11 @@ body {
   font-size: 3.6rem;
   align-content: center;
 }
-.projects-rect {
-  width: 16em;
-  min-height: 22em;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-  margin-top: 1em;
-}
 .projects-rect p{
   font-size: 0.9rem;
 }
 
-.projects-rect img {
-  border-radius: 15px 15px 0px 0px;
-  height: 10em;
-  object-fit: cover;
-}
+
 .projects-rect h3 {
   color: white;
   font-weight: 400;
