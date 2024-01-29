@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
       enable: false,
       zIndex: 0,
     },
-
     interactivity: {
       events: {
         onClick: {

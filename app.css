@@ -1,33 +1,39 @@
 body {
   background-color: #070707;
-  font-family: "Inter", --apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  font-family: "IBM Plex Mono", --apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 .intro {
-  padding-top: 9%;
-  padding-left: 15%;
   box-sizing: border-box;
   position: relative;
-  height: 100vh;
   z-index: 10;
-  display: inline-block;
 }
+.intro-container{
+  max-width: 45em;
+  margin: auto;
+  padding-top: 5%;
+  margin-bottom: 5%;
+}
+
 
 .intro h1 {
-  color: rgb(255, 255, 255);
+  color: white;
   font-size: 4rem;
-  max-width: 60%;
   align-content: center;
+  margin-bottom: 0;
+  font-weight: 500;
 }
-h1 span {
-  color: rgb(22, 77, 196);
-}
-
-.intro p {
+.intro h2 {
+  color: white;
+  font-size: 15pt;
+  align-content: center;
   font-weight: 400;
-  color: rgb(255, 255, 255);
-  max-width: 60%;
+}
+.intro p {
+  font-weight: 300;
+  color: rgb(199, 199, 199);
+  margin: 2em 0 1em 0;
 }
 
 .links {
@@ -54,7 +60,7 @@ a {
   height: auto;
   margin: auto;
   margin-top: 5%;
-  max-width: 60em;
+  max-width: 45em;
   position:relative;
 }
 
@@ -65,7 +71,9 @@ a {
 
 .section-heading {
   display: flex;
+
 }
+
 
 .skills-rect {
   display: flex;
@@ -78,7 +86,7 @@ a {
 
 .icons-container {
   margin: auto;
-  padding: 50px;
+  padding: 10px;
 
 }
 .icons-row {
@@ -94,9 +102,10 @@ a {
 }
 
 .skills-rect img {
-  height: 85px;
-  padding: 30px;
+  height: 70px;
+  padding: 22px;
 }
+
 
 .projects-container {
   display: flex;
@@ -140,7 +149,6 @@ a {
   font-weight: 580;
 }
 .projects-rect div {
-  margin-top: auto;
   color: white;
   margin-left: 2em;
   margin-right: 2em;
@@ -164,24 +172,25 @@ a {
 .divider {
   height: 2px;
   width: 23em;
-  background-color: #164dc4;
+  background-color: rgb(199, 199, 199);
   transform: translateY(56px);
   margin-left: 2em;
 }
 
 .timeline {
   position: absolute;
-    left: 50%;
+    left: 2%;
     height: 100%;
-  width: 2px;
-  background-color: #164dc4;
+  width: 5px;
+  background-color: rgb(199, 199, 199);
   /* transform: translateY(51px); */
   margin:auto;
 }
 
 
 .experience-rect {
-  width: 40%; /* Width of the boxes */
+  width: auto; /* Width of the boxes */
+  margin-left: 6%;
   padding: 10px;
   border-radius: 15px;
   display: flex;
@@ -190,12 +199,9 @@ a {
   border-width: 2px;
   border-color: #2c2c2c;
   border-style: solid;
-  margin-top: 4em;
+  margin-top: 2em;
 }
 
-.experience-rect.right {
-  margin-left: 57%;
-}
 .experience-rect-content{
   display: flex;
 }
@@ -210,7 +216,10 @@ a {
   border-radius: 1.5em;
   height: 3em;
   width: 3em;
-  margin: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0.4em;
+  margin-right: 0.4em;
   object-fit: cover;
 }
 
@@ -255,14 +264,6 @@ a {
   top: 100vh;
   z-index: -999;
   margin-top: -100vh;
-
-  /* box-sizing: border-box;
-    height: 200vh;
-    width: 100%;
-    position: relative;
-    bottom: -200vh;
-    z-index: -999;
-    margin-top: -200vh; */
 }
 
 #opacity-layer {
@@ -348,8 +349,28 @@ body {
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-
+@media only screen and (max-width: 750px) and (min-width: 600px){
+  .intro-container{
+    max-width: 80%;
+    margin: auto;
+    padding-top: 5%;
+  }
+  .body-section {
+    max-width: 90%;
+    margin: auto;
+  }
+  .icons-row {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .skills-rect img {
+    height: 60px;
+    padding: 18px;
+  }
 }
 
 /* Medium devices (landscape tablets, 900px and up) */
@@ -357,28 +378,16 @@ body {
   .projects-container {
   margin: auto;
 }
-  .body-section h2 {
-  font-size: 2.25rem;
-  align-self: flex-start;
-  margin-left: 2rem;
-}
-.skills-rect {
-    margin-left: 3em;
-    margin-right: 3em;
-  }
+
   .icons-container {
     margin: auto;
     padding: 10px;
 
   }
-  .skills-rect img {
-  height: 70px;
-  padding: 22px;
-}
+
 
 .intro h1 {
   font-size: 3.6rem;
-  max-width: 60%;
   align-content: center;
 }
 .projects-rect {
@@ -412,7 +421,6 @@ body {
 .divider {
   height: 2px;
   width: 16em;
-  background-color: #164dc4;
   transform: translateY(51px);
   margin-left: 2em;
 }
@@ -440,21 +448,34 @@ body {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .icons-row {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .skills-rect img {
+    height: 60px;
+    padding: 18px;
+  }
+  .intro-container{
+    max-width: 80%;
+    margin: auto;
+    padding-top: 5%;
+  }
   .skills-rect {
     margin-left: 1.5em;
     margin-right: 1.5em;
+
   }
   .icons-container {
     margin: auto;
     padding: 10px;
 
   }
-  .skills-rect img {
-  height: 60px;
-  padding: 15px;
-}
 .body-section h2 {
-  color: #ffffff;
   font-size: 2rem;
   margin-left: 1.5rem;
   align-self: flex-start;
@@ -462,19 +483,19 @@ body {
 .divider {
   height: 2px;
   width: 8em;
-  background-color: #164dc4;
   transform: translateY(44px);
   margin-left: 2em;
 }
 .intro h1 {
-  color: rgb(255, 255, 255);
   font-size: 3.3rem;
   max-width: 70%;
   align-content: center;
 }
 
+
+
 .projects-rect {
-  width: 19em;
+  width: auto;
   border-radius: 15px;
   display: flex;
   background-color: #101010;
@@ -484,25 +505,17 @@ body {
   border-color: #2c2c2c;
   border-style: solid;
   min-height: 20em;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 1em;
 }
 .intro p {
   font-weight: 400;
-  color: rgb(255, 255, 255);
-  max-width: 50%;
 }
 .intro svg {
   width: 30px;
   height: 30px;
-  color: white;
   margin-right: 0.5em;
-}
-
-.projects-rect {
-  width: 18em;
- 
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-  margin-top: 1em;
 }
 .projects-rect p{
   font-size: 0.9rem;
