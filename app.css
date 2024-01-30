@@ -1,33 +1,39 @@
 body {
   background-color: #070707;
-  font-family: "Inter", --apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  font-family: "IBM Plex Mono", --apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 .intro {
-  padding-top: 9%;
-  padding-left: 15%;
   box-sizing: border-box;
   position: relative;
-  height: 100vh;
   z-index: 10;
-  display: inline-block;
 }
+.intro-container{
+  max-width: 45em;
+  margin: auto;
+  padding-top: 5%;
+  margin-bottom: 5%;
+}
+
 
 .intro h1 {
-  color: rgb(255, 255, 255);
+  color: white;
   font-size: 4rem;
-  max-width: 60%;
   align-content: center;
+  margin-bottom: 0;
+  font-weight: 500;
 }
-h1 span {
-  color: rgb(22, 77, 196);
-}
-
-.intro p {
+.intro h2 {
+  color: white;
+  font-size: 15pt;
+  align-content: center;
   font-weight: 400;
-  color: rgb(255, 255, 255);
-  max-width: 60%;
+}
+.intro p {
+  font-weight: 300;
+  color: rgb(199, 199, 199);
+  margin: 2em 0 1em 0;
 }
 
 .links {
@@ -41,31 +47,34 @@ a {
 .intro svg {
   width: 30px;
   height: 30px;
-  color: white;
+  color: rgb(161, 161, 161);
   transition-duration: 0.4s;
   margin-right: 0.5em;
 }
 
 .intro svg:hover {
-  color: rgb(22, 77, 196);
+  color: rgb(255, 255, 255);
 }
 
 .body-section {
   height: auto;
   margin: auto;
   margin-top: 5%;
-
-  max-width: 60em;
+  max-width: 45em;
+  position:relative;
 }
 
 .body-section h2 {
   color: #ffffff;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  font-weight: 400;
 }
 
 .section-heading {
   display: flex;
+
 }
+
 
 .skills-rect {
   display: flex;
@@ -78,7 +87,7 @@ a {
 
 .icons-container {
   margin: auto;
-  padding: 50px;
+  padding: 10px;
 
 }
 .icons-row {
@@ -94,16 +103,16 @@ a {
 }
 
 .skills-rect img {
-  height: 85px;
-  padding: 30px;
+  height: 70px;
+  padding: 22px;
 }
+
 
 .projects-container {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: center;
-  margin: -1em;
 }
 
 .projects-rect {
@@ -124,26 +133,29 @@ a {
 
 .projects-rect img {
   border-radius: 15px 15px 0px 0px;
-  height: 12em;
+  height: 10em;
   object-fit: cover;
 }
 
 .projects-rect:hover {
-  background-color: rgb(22, 77, 196);
+  background-color: rgb(59, 59, 59);
   transform: translate(0, -15px);
 }
+
 .projects-rect h3 {
   color: white;
   font-weight: 400;
-  margin-left: 1.8em;
-  margin-right: 2em;
-  margin-top: 2em;
+  margin-left: 1.05em;
+  margin-right: 1.2em;
+  margin-top: 1.4em;
 }
 .projects-rect div {
-  margin-top: auto;
   color: white;
-  margin-left: 2em;
-  margin-right: 2em;
+  margin-left: 1.2em;
+  margin-right: 1.2em;
+}
+.projects-rect p{
+  font-size: 0.9rem;
 }
 
 .tags {
@@ -164,10 +176,93 @@ a {
 .divider {
   height: 2px;
   width: 23em;
-  background-color: #164dc4;
-  transform: translateY(56px);
+  background-color: rgb(106, 106, 106);
+  transform: translateY(49px);
   margin-left: 2em;
 }
+
+.timeline {
+  position: absolute;
+    left: 2%;
+    height: 100%;
+  width: 5px;
+  background-color: rgb(106, 106, 106);
+  /* transform: translateY(51px); */
+  margin:auto;
+}
+
+
+.experience-rect {
+  width: auto; /* Width of the boxes */
+  /* margin-left: 6%; */
+  border-radius: 15px;
+  display: flex;
+  background-color: #101010;
+  transition-duration: 0.4s;
+  border-width: 2px;
+  border-color: #2c2c2c;
+  border-style: solid;
+  margin-top: 1.2em;
+}
+
+.experience-rect-content{
+  display: flex;
+  align-items: center; /* Align items vertically */
+  justify-content: space-between; /* Space between logo and text block */
+  flex-wrap: wrap; /* Allow items to wrap to next line */
+  padding: 1em; /* Add some padding */
+}
+
+.experience-rect-content div {
+  margin-left: 0.5em;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.experience-rect-content img {
+  border-radius: 1.5em;
+  height: 3em;
+  width: 3em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0.4em;
+  margin-right: 0.4em;
+  object-fit: cover;
+}
+
+.experience-rect:hover {
+  background-color: rgb(59, 59, 59);
+}
+.experience-rect-content h3 {
+  color: white;
+  font-weight: 500;
+  font-size: 14pt;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.experience-rect-content h4 {
+  font-weight: 400;
+  margin-top: 2px;
+  font-size: 12pt;
+  margin-bottom: 0;
+  color: white;
+  font-style: normal;
+}
+.experience-rect-content h5 {
+  color: white;
+  font-weight: 400;
+  margin-top: 1px;
+  margin-bottom: 0;
+  color: rgb(158, 158, 158);
+  font-style: italic;
+  font-size: 12pt;
+}
+
+
+
+
+
+
 
 #particles {
   box-sizing: border-box;
@@ -177,14 +272,6 @@ a {
   top: 100vh;
   z-index: -999;
   margin-top: -100vh;
-
-  /* box-sizing: border-box;
-    height: 200vh;
-    width: 100%;
-    position: relative;
-    bottom: -200vh;
-    z-index: -999;
-    margin-top: -200vh; */
 }
 
 #opacity-layer {
@@ -236,7 +323,7 @@ footer a svg {
 
 
 footer a svg:hover {
-  fill: rgb(22, 77, 196);
+  fill: rgb(255, 255, 255);
 }
 body {
   margin: 0;
@@ -266,66 +353,65 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #4e4e52 #1a1a1d;
 }
+.experience-details {
+  display: flex;
+  flex-direction: column; /* Stack title, company, and date vertically */
+}
 
+/* For larger screens, you might want the date to be on the right */
+@media only screen and (min-width: 966px) {
+  .experience-details {
+    flex-direction: row; /* Side by side */
+    justify-content: space-between; /* Push the date to the right */
+    align-items: center; /* Center align vertically */
+  }
+}
 
+@media only screen and (max-width: 750px) {
+
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-
+@media only screen and (max-width: 750px) and (min-width: 600px){
+  .intro-container{
+    max-width: 87%;
+    margin: auto;
+    padding-top: 5%;
+  }
+  .body-section {
+    max-width: 90%;
+    margin: auto;
+  }
+  .icons-row {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .skills-rect img {
+    height: 60px;
+    padding: 18px;
+  }
 }
 
 /* Medium devices (landscape tablets, 900px and up) */
 @media only screen and (max-width: 965px) {
-  .projects-container {
-  margin: auto;
-}
-  .body-section h2 {
-  font-size: 2.25rem;
-  align-self: flex-start;
-  margin-left: 2rem;
-}
-.skills-rect {
-    margin-left: 3em;
-    margin-right: 3em;
-  }
+
   .icons-container {
     margin: auto;
     padding: 10px;
 
   }
-  .skills-rect img {
-  height: 70px;
-  padding: 22px;
-}
+
 
 .intro h1 {
   font-size: 3.6rem;
-  max-width: 60%;
   align-content: center;
 }
-.projects-rect {
-  width: 16em;
-  min-height: 22em;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-  margin-top: 1em;
-}
-.projects-rect p{
-  font-size: 0.9rem;
-}
 
-.projects-rect img {
-  border-radius: 15px 15px 0px 0px;
-  height: 10em;
-  object-fit: cover;
-}
-.projects-rect h3 {
-  color: white;
-  font-weight: 400;
-  margin-left: 1.05em;
-  margin-right: 1.2em;
-  margin-top: 1.4em;
-}
+
 .projects-rect div {
   color: white;
   margin-left: 1.2em;
@@ -334,15 +420,15 @@ body {
 .divider {
   height: 2px;
   width: 16em;
-  background-color: #164dc4;
   transform: translateY(51px);
   margin-left: 2em;
 }
+
 }
 
 /* Large devices (laptops/desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  ...;
+@media only screen and (min-width: 60em) {
+  
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -352,41 +438,66 @@ body {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .experience-rect-content {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start of the container */
+    padding: 0 0 0.5em 0.5em;
+  }
+
+  .experience-rect-content div {
+    width: 100%; /* Full width */
+    margin-bottom: 0.5em; /* Add some margin to the bottom */
+  }
+  .experience-rect{
+    padding: 0;
+  }
+  .icons-row {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .skills-rect img {
+    height: 60px;
+    padding: 18px;
+  }
+  .intro-container{
+    max-width: 87%;
+    margin: auto;
+    padding-top: 5%;
+  }
   .skills-rect {
-    margin-left: 1.5em;
-    margin-right: 1.5em;
+
+
   }
   .icons-container {
     margin: auto;
     padding: 10px;
 
   }
-  .skills-rect img {
-  height: 60px;
-  padding: 15px;
-}
 .body-section h2 {
-  color: #ffffff;
-  font-size: 2rem;
-  margin-left: 1.5rem;
-  align-self: flex-start;
+  font-size: 1.5rem;
 }
 .divider {
   height: 2px;
   width: 8em;
-  background-color: #164dc4;
-  transform: translateY(44px);
+  transform: translateY(38px);
   margin-left: 2em;
 }
 .intro h1 {
-  color: rgb(255, 255, 255);
   font-size: 3.3rem;
   max-width: 70%;
   align-content: center;
 }
 
+.body-section{
+  max-width: 92%;
+}
+
 .projects-rect {
-  width: 19em;
+  width: auto;
   border-radius: 15px;
   display: flex;
   background-color: #101010;
@@ -396,25 +507,20 @@ body {
   border-color: #2c2c2c;
   border-style: solid;
   min-height: 20em;
+  margin-left: 0em;
+  margin-right: 0em;
+  margin-top: 1em;
 }
 .intro p {
-  font-weight: 400;
-  color: rgb(255, 255, 255);
-  max-width: 50%;
+  font-size: 11pt;
+}
+.intro h2 {
+  font-size: 13pt;
 }
 .intro svg {
   width: 30px;
   height: 30px;
-  color: white;
   margin-right: 0.5em;
-}
-
-.projects-rect {
-  width: 18em;
- 
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-  margin-top: 1em;
 }
 .projects-rect p{
   font-size: 0.9rem;
