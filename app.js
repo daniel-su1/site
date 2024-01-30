@@ -21,3 +21,34 @@ let elements = document.querySelectorAll('.fade-in-element');
 elements.forEach(element => {
   observer.observe(element);
 });
+
+
+
+let currentPage = 1;
+  const projectsPerPage = 4;
+  const projects = document.querySelectorAll('.projects-rect');
+  const totalPages = Math.ceil(projects.length / projectsPerPage);
+
+  function showProjects(page) {
+    const start = (page - 1) * projectsPerPage;
+    const end = page * projectsPerPage;
+    projects.forEach((project, index) => {
+      if (index >= start && index < end) {
+        project.style.display = 'flex';
+      } else {
+        project.style.display = 'none';
+      }
+    });
+  }
+
+  function navigateProjects(direction) {
+    if (direction === 'next' && currentPage < totalPages) {
+      currentPage++;
+    } else if (direction === 'prev' && currentPage > 1) {
+      currentPage--;
+    }
+    showProjects(currentPage);
+  }
+
+  // Initialize the first view
+  showProjects(currentPage);
