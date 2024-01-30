@@ -207,16 +207,18 @@ a {
 
 .experience-rect-content{
   display: flex;
-  align-items: center; /* Align items vertically */
-  justify-content: space-between; /* Space between logo and text block */
-  flex-wrap: wrap; /* Allow items to wrap to next line */
-  padding: 1em; /* Add some padding */
+  padding: 0.7em; /* Add some padding */
+  width: 100%;
 }
 
-.experience-rect-content div {
+.experience-text {
   margin-left: 0.5em;
   margin-top: auto;
   margin-bottom: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: inherit;
 }
 
 .experience-rect-content img {
@@ -256,6 +258,7 @@ a {
   color: rgb(158, 158, 158);
   font-style: italic;
   font-size: 12pt;
+  display: flex;
 }
 
 
@@ -438,15 +441,25 @@ body {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .experience-text{
+    flex-direction: column;
+  }
+  .experience-text h3 {
+    font-size: 12pt;
+  }
+  .experience-rect h4 {
+    font-size: 11pt;
+  }
+  .experience-rect h5 {
+    font-size: 11pt;
+  }
   .experience-rect-content {
-    flex-direction: column; /* Stack items vertically */
     align-items: flex-start; /* Align items to the start of the container */
-    padding: 0 0 0.5em 0.5em;
+    padding: 0.5em;
   }
 
   .experience-rect-content div {
     width: 100%; /* Full width */
-    margin-bottom: 0.5em; /* Add some margin to the bottom */
   }
   .experience-rect{
     padding: 0;
@@ -506,7 +519,7 @@ body {
   border-width: 2px;
   border-color: #2c2c2c;
   border-style: solid;
-  min-height: 20em;
+  min-height: 0em;
   margin-left: 0em;
   margin-right: 0em;
   margin-top: 1em;
@@ -523,7 +536,7 @@ body {
   margin-right: 0.5em;
 }
 .projects-rect p{
-  font-size: 0.9rem;
+  font-size: 10pt;
 }
 
 .projects-rect img {
@@ -538,6 +551,8 @@ body {
   margin-left: 1.05em;
   margin-right: 1.2em;
   margin-top: 1em;
+  margin-bottom: 0;
+  font-size: 13pt;
 }
 .projects-rect div {
   color: white;
