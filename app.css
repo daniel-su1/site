@@ -47,13 +47,13 @@ a {
 .intro svg {
   width: 30px;
   height: 30px;
-  color: white;
+  color: rgb(161, 161, 161);
   transition-duration: 0.4s;
   margin-right: 0.5em;
 }
 
 .intro svg:hover {
-  color: rgb(22, 77, 196);
+  color: rgb(255, 255, 255);
 }
 
 .body-section {
@@ -66,7 +66,8 @@ a {
 
 .body-section h2 {
   color: #ffffff;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  font-weight: 400;
 }
 
 .section-heading {
@@ -112,7 +113,6 @@ a {
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: center;
-  margin: -1em;
 }
 
 .projects-rect {
@@ -138,20 +138,24 @@ a {
 }
 
 .projects-rect:hover {
-  background-color: rgb(22, 77, 196);
+  background-color: rgb(59, 59, 59);
   transform: translate(0, -15px);
 }
+
 .projects-rect h3 {
   color: white;
-  margin-left: 1.8em;
-  margin-right: 2em;
-  margin-top: 2em;
-  font-weight: 580;
+  font-weight: 400;
+  margin-left: 1.05em;
+  margin-right: 1.2em;
+  margin-top: 1.4em;
 }
 .projects-rect div {
   color: white;
-  margin-left: 2em;
-  margin-right: 2em;
+  margin-left: 1.2em;
+  margin-right: 1.2em;
+}
+.projects-rect p{
+  font-size: 0.9rem;
 }
 
 .tags {
@@ -172,8 +176,8 @@ a {
 .divider {
   height: 2px;
   width: 23em;
-  background-color: rgb(199, 199, 199);
-  transform: translateY(56px);
+  background-color: rgb(106, 106, 106);
+  transform: translateY(49px);
   margin-left: 2em;
 }
 
@@ -182,7 +186,7 @@ a {
     left: 2%;
     height: 100%;
   width: 5px;
-  background-color: rgb(199, 199, 199);
+  background-color: rgb(106, 106, 106);
   /* transform: translateY(51px); */
   margin:auto;
 }
@@ -190,8 +194,7 @@ a {
 
 .experience-rect {
   width: auto; /* Width of the boxes */
-  margin-left: 6%;
-  padding: 10px;
+  /* margin-left: 6%; */
   border-radius: 15px;
   display: flex;
   background-color: #101010;
@@ -199,11 +202,15 @@ a {
   border-width: 2px;
   border-color: #2c2c2c;
   border-style: solid;
-  margin-top: 2em;
+  margin-top: 1.2em;
 }
 
 .experience-rect-content{
   display: flex;
+  align-items: center; /* Align items vertically */
+  justify-content: space-between; /* Space between logo and text block */
+  flex-wrap: wrap; /* Allow items to wrap to next line */
+  padding: 1em; /* Add some padding */
 }
 
 .experience-rect-content div {
@@ -224,18 +231,19 @@ a {
 }
 
 .experience-rect:hover {
-  background-color: rgb(22, 77, 196);
+  background-color: rgb(59, 59, 59);
 }
 .experience-rect-content h3 {
   color: white;
-  font-weight: 620;
-  font-size: 15pt;
+  font-weight: 500;
+  font-size: 14pt;
   margin-top: 0;
   margin-bottom: 0;
 }
 .experience-rect-content h4 {
   font-weight: 400;
   margin-top: 2px;
+  font-size: 12pt;
   margin-bottom: 0;
   color: white;
   font-style: normal;
@@ -315,7 +323,7 @@ footer a svg {
 
 
 footer a svg:hover {
-  fill: rgb(22, 77, 196);
+  fill: rgb(255, 255, 255);
 }
 body {
   margin: 0;
@@ -345,13 +353,28 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #4e4e52 #1a1a1d;
 }
+.experience-details {
+  display: flex;
+  flex-direction: column; /* Stack title, company, and date vertically */
+}
 
+/* For larger screens, you might want the date to be on the right */
+@media only screen and (min-width: 966px) {
+  .experience-details {
+    flex-direction: row; /* Side by side */
+    justify-content: space-between; /* Push the date to the right */
+    align-items: center; /* Center align vertically */
+  }
+}
 
+@media only screen and (max-width: 750px) {
+
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 750px) and (min-width: 600px){
   .intro-container{
-    max-width: 80%;
+    max-width: 87%;
     margin: auto;
     padding-top: 5%;
   }
@@ -375,9 +398,6 @@ body {
 
 /* Medium devices (landscape tablets, 900px and up) */
 @media only screen and (max-width: 965px) {
-  .projects-container {
-  margin: auto;
-}
 
   .icons-container {
     margin: auto;
@@ -390,18 +410,8 @@ body {
   font-size: 3.6rem;
   align-content: center;
 }
-.projects-rect p{
-  font-size: 0.9rem;
-}
 
 
-.projects-rect h3 {
-  color: white;
-  font-weight: 400;
-  margin-left: 1.05em;
-  margin-right: 1.2em;
-  margin-top: 1.4em;
-}
 .projects-rect div {
   color: white;
   margin-left: 1.2em;
@@ -418,16 +428,7 @@ body {
 
 /* Large devices (laptops/desktops, 1200px and up) */
 @media only screen and (min-width: 60em) {
-  .experience-rect::after {
-    content: '';
-    position:absolute;
-    width: 72px;
-    height: 2px;
-    background-color: #164dc4;
-    z-index: 1;
-    right: 480px;
-    transform: translateY(40px);
-  }
+  
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -437,6 +438,19 @@ body {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .experience-rect-content {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start of the container */
+    padding: 0 0 0.5em 0.5em;
+  }
+
+  .experience-rect-content div {
+    width: 100%; /* Full width */
+    margin-bottom: 0.5em; /* Add some margin to the bottom */
+  }
+  .experience-rect{
+    padding: 0;
+  }
   .icons-row {
     padding-top: 1em;
     padding-bottom: 1em;
@@ -450,13 +464,12 @@ body {
     padding: 18px;
   }
   .intro-container{
-    max-width: 80%;
+    max-width: 87%;
     margin: auto;
     padding-top: 5%;
   }
   .skills-rect {
-    margin-left: 1.5em;
-    margin-right: 1.5em;
+
 
   }
   .icons-container {
@@ -465,14 +478,12 @@ body {
 
   }
 .body-section h2 {
-  font-size: 2rem;
-  margin-left: 1.5rem;
-  align-self: flex-start;
+  font-size: 1.5rem;
 }
 .divider {
   height: 2px;
   width: 8em;
-  transform: translateY(44px);
+  transform: translateY(38px);
   margin-left: 2em;
 }
 .intro h1 {
@@ -481,7 +492,9 @@ body {
   align-content: center;
 }
 
-
+.body-section{
+  max-width: 92%;
+}
 
 .projects-rect {
   width: auto;
@@ -494,12 +507,15 @@ body {
   border-color: #2c2c2c;
   border-style: solid;
   min-height: 20em;
-  margin-left: 1em;
-  margin-right: 1em;
+  margin-left: 0em;
+  margin-right: 0em;
   margin-top: 1em;
 }
 .intro p {
-  font-weight: 400;
+  font-size: 11pt;
+}
+.intro h2 {
+  font-size: 13pt;
 }
 .intro svg {
   width: 30px;
