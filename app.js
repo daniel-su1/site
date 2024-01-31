@@ -29,7 +29,7 @@ let currentPage = 1;
   const projects = document.querySelectorAll('.projects-rect');
   const totalPages = Math.ceil(projects.length / projectsPerPage);
 
-  function showProjects(page) {
+  function showProjectsNoAnimate(page) {
     const start = (page - 1) * projectsPerPage;
     const end = page * projectsPerPage;
     projects.forEach((project, index) => {
@@ -39,7 +39,56 @@ let currentPage = 1;
         project.style.display = 'none';
       }
     });
+    if(currentPage === 1){
+      document.getElementById('prevButton').style.display = 'none';
+      document.getElementById('nextButton').style.display = 'block';
+    }
+    else if(currentPage === totalPages){
+      document.getElementById('prevButton').style.display = 'block';
+      document.getElementById('nextButton').style.display = 'none';
+    }
+    else {
+      document.getElementById('prevButton').style.display = 'block';
+      document.getElementById('nextButton').style.display = 'block';
+    }
   }
+  function showProjects(page) {
+    const start = (page - 1) * projectsPerPage;
+    const end = page * projectsPerPage;
+
+    // Fade out visible projects
+    projects.forEach(project => {
+        if (project.style.display !== 'none') {
+            project.style.opacity = '0';
+        }
+    });
+
+    // After fade out transition, hide all and then show the relevant projects
+    setTimeout(() => {
+        projects.forEach((project, index) => {
+            if (index >= start && index < end) {
+                project.style.display = 'flex';
+                // Delay the fade in to provide the fade out effect time to complete
+                setTimeout(() => project.style.opacity = '1', 100);
+            } else {
+                project.style.display = 'none';
+            }
+        });
+    }, 300); // should be close or equal to the transition time for smooth effect
+    if(currentPage === 1){
+      document.getElementById('prevButton').style.display = 'none';
+      document.getElementById('nextButton').style.display = 'block';
+    }
+    else if(currentPage === totalPages){
+      document.getElementById('prevButton').style.display = 'block';
+      document.getElementById('nextButton').style.display = 'none';
+    }
+    else {
+      document.getElementById('prevButton').style.display = 'block';
+      document.getElementById('nextButton').style.display = 'block';
+    }
+}
+
 
   function navigateProjects(direction) {
     if (direction === 'next' && currentPage < totalPages) {
@@ -49,6 +98,6 @@ let currentPage = 1;
     }
     showProjects(currentPage);
   }
-
-  // Initialize the first view
-  showProjects(currentPage);
+  document.addEventListener('DOMContentLoaded', function() {
+    showProjectsNoAnimate(currentPage);
+  });
