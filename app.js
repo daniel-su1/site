@@ -25,14 +25,27 @@ elements.forEach(element => {
 
 
 let currentPage = 1;
-  const projectsPerPage = 4;
+  let projectsPerPage = 4;
   const projects = document.querySelectorAll('.projects-rect');
   const prevButton = document.getElementById('prevButton');
   const nextButton = document.getElementById('nextButton');
   const totalPages = Math.ceil(projects.length / projectsPerPage);
 
   function showProjectsNoAnimate(page) {
-    const start = (page - 1) * projectsPerPage;
+    if(window.innerWidth < 600){
+      prevButton.style.display = 'none';
+      nextButton.style.display = 'none';
+      projectsPerPage = projects.length;
+      projects.forEach((project, index) => {
+        project.style.display = 'flex';
+        project.style.opacity = '1';
+      });
+    }
+    else{
+      projectsPerPage = 4;
+      prevButton.style.display = 'block';
+      nextButton.style.display = 'block';
+      const start = (page - 1) * projectsPerPage;
     const end = page * projectsPerPage;
     projects.forEach((project, index) => {
       if (index >= start && index < end) {
@@ -43,6 +56,8 @@ let currentPage = 1;
       }
     });
     changeButtonOpacity();
+    }
+    
   }
   function showProjects(page) {
     const start = (page - 1) * projectsPerPage;
@@ -109,6 +124,11 @@ function changeButtonOpacity() {
     }
     showProjects(currentPage);
   }
+
+  window.addEventListener('resize', function() {
+    showProjectsNoAnimate(currentPage);
+  });
+
   document.addEventListener('DOMContentLoaded', function() {
     showProjectsNoAnimate(currentPage);
     prevButton.style.transition = 'opacity 0.2s, color 0.3s';
@@ -125,5 +145,6 @@ function changeButtonOpacity() {
       prevButton.style.visibility = 'visible';
       nextButton.style.visibility = 'visible';
     }
+
 
   });
