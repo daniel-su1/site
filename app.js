@@ -27,6 +27,8 @@ elements.forEach(element => {
 let currentPage = 1;
   const projectsPerPage = 4;
   const projects = document.querySelectorAll('.projects-rect');
+  const prevButton = document.getElementById('prevButton');
+  const nextButton = document.getElementById('nextButton');
   const totalPages = Math.ceil(projects.length / projectsPerPage);
 
   function showProjectsNoAnimate(page) {
@@ -37,20 +39,10 @@ let currentPage = 1;
         project.style.display = 'flex';
       } else {
         project.style.display = 'none';
+        project.style.opacity = '0';
       }
     });
-    if(currentPage === 1){
-      document.getElementById('prevButton').style.display = 'none';
-      document.getElementById('nextButton').style.display = 'block';
-    }
-    else if(currentPage === totalPages){
-      document.getElementById('prevButton').style.display = 'block';
-      document.getElementById('nextButton').style.display = 'none';
-    }
-    else {
-      document.getElementById('prevButton').style.display = 'block';
-      document.getElementById('nextButton').style.display = 'block';
-    }
+    changeButtonOpacity();
   }
   function showProjects(page) {
     const start = (page - 1) * projectsPerPage;
@@ -62,33 +54,52 @@ let currentPage = 1;
             project.style.opacity = '0';
         }
     });
-
+    changeButtonOpacity();
     // After fade out transition, hide all and then show the relevant projects
     setTimeout(() => {
         projects.forEach((project, index) => {
             if (index >= start && index < end) {
                 project.style.display = 'flex';
                 // Delay the fade in to provide the fade out effect time to complete
-                setTimeout(() => project.style.opacity = '1', 100);
+                setTimeout(() => {
+                  project.style.opacity = '1';
+                  
+                }, 200);
             } else {
                 project.style.display = 'none';
+                if(currentPage === 1){
+                  prevButton.style.visibility = 'hidden';
+                  nextButton.style.visibility = 'visible';
+                }
+                else if(currentPage === totalPages){
+                  prevButton.style.visibility = 'visible';
+                  nextButton.style.visibility = 'hidden';
+                }
+                else {
+                  prevButton.style.visibility = 'visible';
+                  nextButton.style.visibility = 'visible';
+                }
             }
         });
     }, 300); // should be close or equal to the transition time for smooth effect
-    if(currentPage === 1){
-      document.getElementById('prevButton').style.display = 'none';
-      document.getElementById('nextButton').style.display = 'block';
-    }
-    else if(currentPage === totalPages){
-      document.getElementById('prevButton').style.display = 'block';
-      document.getElementById('nextButton').style.display = 'none';
-    }
-    else {
-      document.getElementById('prevButton').style.display = 'block';
-      document.getElementById('nextButton').style.display = 'block';
-    }
+    changeButtonOpacity();
 }
 
+
+function changeButtonOpacity() {
+  if (currentPage === 1) {
+    prevButton.style.opacity = '0';
+    nextButton.style.opacity = '1';
+  }
+  else if (currentPage === totalPages) {
+    prevButton.style.opacity = '1';
+    nextButton.style.opacity = '0';
+  }
+  else {
+    prevButton.style.opacity = '1';
+    nextButton.style.opacity = '1';
+  }
+}
 
   function navigateProjects(direction) {
     if (direction === 'next' && currentPage < totalPages) {
@@ -100,4 +111,19 @@ let currentPage = 1;
   }
   document.addEventListener('DOMContentLoaded', function() {
     showProjectsNoAnimate(currentPage);
+    prevButton.style.transition = 'opacity 0.2s, color 0.3s';
+    nextButton.style.transition = 'opacity 0.2s, color 0.3s';
+    if(currentPage === 1){
+      prevButton.style.visibility = 'hidden';
+      nextButton.style.visibility = 'visible';
+    }
+    else if(currentPage === totalPages){
+      prevButton.style.visibility = 'visible';
+      nextButton.style.visibility = 'hidden';
+    }
+    else {
+      prevButton.style.visibility = 'visible';
+      nextButton.style.visibility = 'visible';
+    }
+
   });

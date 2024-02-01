@@ -192,7 +192,11 @@
             </div>
           </div>
         </a>
-        <a class="fade-in-element" target="_blank" href="https://www.teranet.ca/">
+        <a
+          class="fade-in-element"
+          target="_blank"
+          href="https://www.teranet.ca/"
+        >
           <div class="experience-rect right fade-in hidden" id="cover">
             <div class="experience-rect-content">
               <img
@@ -207,10 +211,10 @@
             </div>
           </div>
         </a>
-        
+
         <div class=""></div>
         <a class="fade-in-element" target="_blank" href="https://csclub.ca/">
-          <div class="experience-rect right fade-in hidden" id="cover">
+          <div class="experience-rect right" id="cover">
             <div class="experience-rect-content">
               <img
                 src="https://media.licdn.com/dms/image/D560BAQEzT7qXPY5mMw/company-logo_200_200/0/1689902647768/uwcsclub_logo?e=1713398400&v=beta&t=6ZC6SsXO3zZrtZiAMyceI-28etjAbGkJCqALX41hgUM"
@@ -250,174 +254,173 @@
           <h2>Projects</h2>
           <div class="divider"></div>
         </div>
-        <button id="prevButton" onclick="navigateProjects('prev')">&#10094;</button><button id="nextButton" onclick="navigateProjects('next')">&#10095;</button>
-        <div class="projects-container">
-          <a
-            class="fade-in-element"
-            target="_blank"
-            href="https://github.com/cypraeno/caitlyn"
-          >
-            <div class="projects-rect fade-in hidden" id="cover">
-              <img src="https://raw.githubusercontent.com/daniel-su1/ByteBattles/master/screenshots/2.png" alt="" id="raytracer" />
-              <h3>ByteBattles</h3>
-              <div>
-                <p>
-                  A streamlined raytracing engine aimed to provide higher-level
-                  graphics for 3D film animation done in Godot.
-                </p>
-                <p class="tags">C++, Nvidia CUDA, CMake, vcpkg, Docker</p>
+        <div class="dots-container"></div>
+        <div class="projects-controller">
+          <button id="prevButton" class="fade-in-element" onclick="navigateProjects('prev')">
+            &#10094;
+          </button>
+          <div class="projects-container">
+            <a
+              class="fade-in-element"
+              target="_blank"
+              href="https://github.com/cypraeno/caitlyn"
+            >
+              <div class="projects-rect fade-in hidden" id="cover">
+                <img
+                  src="https://raw.githubusercontent.com/daniel-su1/ByteBattles/master/screenshots/2.png"
+                  alt=""
+                  id="raytracer"
+                />
+                <h3>ByteBattles</h3>
+                <div>
+                  <p>
+                    A streamlined raytracing engine aimed to provide
+                    higher-level graphics for 3D film animation done in Godot.
+                  </p>
+                  <p class="tags">C++, Nvidia CUDA, CMake, vcpkg, Docker</p>
+                </div>
               </div>
-            </div>
-          </a>
-          <a
-            class="fade-in-element"
-            target="_blank"
-            href="https://github.com/cypraeno/caitlyn"
-          >
-            <div class="projects-rect fade-in hidden" id="cover">
-              <img src="img/raytracer.png" alt="" id="raytracer" />
-              <h3>Caitlyn Raytracer</h3>
-              <div>
-                <p>
-                  A streamlined raytracing engine aimed to provide higher-level
-                  graphics for 3D film animation done in Godot.
-                </p>
-                <p class="tags">C++, Nvidia CUDA, CMake, vcpkg, Docker</p>
+            </a>
+            <a
+              class="fade-in-element"
+              target="_blank"
+              href="https://github.com/cypraeno/caitlyn"
+            >
+              <div class="projects-rect fade-in hidden" id="cover">
+                <img src="img/raytracer.png" alt="" id="raytracer" />
+                <h3>Caitlyn Raytracer</h3>
+                <div>
+                  <p>
+                    A streamlined raytracing engine aimed to provide
+                    higher-level graphics for 3D film animation done in Godot.
+                  </p>
+                  <p class="tags">C++, Nvidia CUDA, CMake, vcpkg, Docker</p>
+                </div>
               </div>
-            </div>
-          </a>
-          <a
-            class="fade-in-element"
-            target="_blank"
-            href="https://github.com/daniel-su1/YouOMe"
-          >
-            <div class="projects-rect fade-in hidden" id="cover">
-              <img src="img/YouOMe.png" alt="" id="youome" />
-              <h3>YouOMe</h3>
-              <div>
-                <p>
-                  A Java Spring Boot based RESTful CRUD API application to help
-                  keep track of money owed by friends.
-                </p>
-                <p class="tags">
-                  Java, Spring Boot, MySQL, Spring Data JPA, Thymeleaf,
-                  Bootstrap
-                </p>
+            </a>
+            <a
+              class="fade-in-element"
+              target="_blank"
+              href="https://github.com/daniel-su1/YouOMe"
+            >
+              <div class="projects-rect fade-in hidden" id="cover">
+                <img src="img/YouOMe.png" alt="" id="youome" />
+                <h3>YouOMe</h3>
+                <div>
+                  <p>
+                    A Java Spring Boot based RESTful CRUD API application to
+                    help keep track of money owed by friends.
+                  </p>
+                  <p class="tags">
+                    Java, Spring Boot, MySQL, Spring Data JPA, Thymeleaf,
+                    Bootstrap
+                  </p>
+                </div>
               </div>
-            </div>
-          </a>
-          <a
-            class="fade-in-element"
-            target="_blank"
-            href="https://github.com/daniel-su1/HackRMatch/tree/main"
-          >
-            <div class="projects-rect fade-in hidden" id="cover">
-              <img src="img/hackrmatch.png" alt="" id="hackrmatchimg" />
-              <h3>HackRMatch</h3>
-              <div>
-                <p>
-                  A web app that streamlines the team formation process, connecting
-                  hackathon participants using AI.
-                </p>
-                <p class="tags">
-                  MongoDB Atlas, Express, React, Node.js, Chakra UI, Passport.js
-                </p>
+            </a>
+            <a
+              class="fade-in-element"
+              target="_blank"
+              href="https://github.com/daniel-su1/HackRMatch/tree/main"
+            >
+              <div class="projects-rect fade-in hidden" id="cover">
+                <img src="img/hackrmatch.png" alt="" id="hackrmatchimg" />
+                <h3>HackRMatch</h3>
+                <div>
+                  <p>
+                    A web app that streamlines the team formation process,
+                    connecting hackathon participants using AI.
+                  </p>
+                  <p class="tags">
+                    MongoDB Atlas, Express, React, Node.js, Chakra UI,
+                    Passport.js
+                  </p>
+                </div>
               </div>
-            </div>
-          </a>
-          <a
-            class="fade-in-element"
-            target="_blank"
-            href="https://studyspotter-2e57eb2137fb.herokuapp.com/"
-          >
-            <div class="projects-rect fade-in hidden" id="study">
-              <img src="img/studyspotter.jpg" alt="" id="studyspotterimg" />
-              <h3>StudySpotter</h3>
-              <div>
-                <p>
-                  Full-stack Web app CRUD that allows users to share and review
-                  the best study spots in Waterloo.
-                </p>
-                <p class="tags">
-                  Node.js, Express, Bootstrap, MongoDB Atlas, Mongoose,
-                  Passport.js, Mapbox API, Cloudinary API
-                </p>
+            </a>
+            <a
+              class="fade-in-element"
+              target="_blank"
+              href="https://studyspotter-2e57eb2137fb.herokuapp.com/"
+            >
+              <div class="projects-rect fade-in hidden" id="study">
+                <img src="img/studyspotter.jpg" alt="" id="studyspotterimg" />
+                <h3>StudySpotter</h3>
+                <div>
+                  <p>
+                    Full-stack Web app CRUD that allows users to share and
+                    review the best study spots in Waterloo.
+                  </p>
+                  <p class="tags">
+                    Node.js, Express, Bootstrap, MongoDB Atlas, Mongoose,
+                    Passport.js, Mapbox API, Cloudinary API
+                  </p>
+                </div>
               </div>
-            </div>
-          </a>
-          <a
-            class="fade-in-element"
-            target="_blank"
-            href="https://github.com/daniel-su1/wheel-of-fortune"
-          >
-            <div class="projects-rect" id="wheel">
-              <img src="img/wheel.jpg" alt="" id="wheelimg" />
-              <h3>Wheel Of Fortune</h3>
-              <div>
-                <p>
-                  A translation of the popular Wheel Of Fortune gameshow as an
-                  HSA game in Java. Features the original soundtrack and sounds
-                  from the show, with a custom wheel!
-                </p>
-                <p class="tags">Java</p>
+            </a>
+            <a
+              class="fade-in-element"
+              target="_blank"
+              href="https://github.com/daniel-su1/wheel-of-fortune"
+            >
+              <div class="projects-rect" id="wheel">
+                <img src="img/wheel.jpg" alt="" id="wheelimg" />
+                <h3>Wheel Of Fortune</h3>
+                <div>
+                  <p>
+                    A translation of the popular Wheel Of Fortune gameshow as an
+                    HSA game in Java. Features the original soundtrack and
+                    sounds from the show, with a custom wheel!
+                  </p>
+                  <p class="tags">Java</p>
+                </div>
               </div>
-            </div>
-          </a>
-          <a
-            class="fade-in-element"
-            target="_blank"
-            href="https://github.com/daniel-su1/cover-writer"
-          >
-            <div class="projects-rect fade-in hidden" id="cover">
-              <img src="img/coverwriter.jpg" alt="" id="coverwriterimg" />
-              <h3>WaterlooDontWork</h3>
-              <div>
-                <p>
-                  A web app that parses information from a user's resume and a
-                  job listing and generates a cover letter using OpenAI's
-                  Text-Davinci-003 model.
-                </p>
-                <p class="tags">Bootstrap, OpenAI API, Node.js, Express, EJS</p>
+            </a>
+            <a
+              class="fade-in-element"
+              target="_blank"
+              href="https://github.com/daniel-su1/cover-writer"
+            >
+              <div class="projects-rect fade-in hidden" id="cover">
+                <img src="img/coverwriter.jpg" alt="" id="coverwriterimg" />
+                <h3>WaterlooDontWork</h3>
+                <div>
+                  <p>
+                    A web app that parses information from a user's resume and a
+                    job listing and generates a cover letter using OpenAI's
+                    Text-Davinci-003 model.
+                  </p>
+                  <p class="tags">
+                    Bootstrap, OpenAI API, Node.js, Express, EJS
+                  </p>
+                </div>
               </div>
-            </div>
-          </a>
-          <a
-            class="fade-in-element"
-            target="_blank"
-            href="https://github.com/daniel-su1/cover-writer"
-          >
-            <div class="projects-rect fade-in hidden" id="cover">
-              <img src="img/coverwriter.jpg" alt="" id="coverwriterimg" />
-              <h3>CoverWriter</h3>
-              <div>
-                <p>
-                  A web app that parses information from a user's resume and a
-                  job listing and generates a cover letter using OpenAI's
-                  Text-Davinci-003 model.
-                </p>
-                <p class="tags">Bootstrap, OpenAI API, Node.js, Express, EJS</p>
+            </a>
+            <a
+              class="fade-in-element"
+              target="_blank"
+              href="https://github.com/daniel-su1/cover-writer"
+            >
+              <div class="projects-rect fade-in hidden" id="cover">
+                <img src="img/coverwriter.jpg" alt="" id="coverwriterimg" />
+                <h3>CoverWriter</h3>
+                <div>
+                  <p>
+                    A web app that parses information from a user's resume and a
+                    job listing and generates a cover letter using OpenAI's
+                    Text-Davinci-003 model.
+                  </p>
+                  <p class="tags">
+                    Bootstrap, OpenAI API, Node.js, Express, EJS
+                  </p>
+                </div>
               </div>
-            </div>
-          </a>
-          <!-- <a
-            class="fade-in-element"
-            target="_blank"
-            href="https://flourishing-custard-a9d916.netlify.app/"
-          >
-            <div class="projects-rect fade-in hidden" id="cover">
-              <img src="img/faraway.png" alt="" id="farawayimg" />
-              <h3>Far Away Travel List</h3>
-              <div>
-                <p>aaaaaa
-                  Lightweight React app that allows users to manage their
-                  packing list for their travels.
-                </p>
-                <p class="tags">React</p>
-              </div>
-            </div>
-          </a> -->
+            </a>
+          </div>
+          <button id="nextButton" class="fade-in-element" onclick="navigateProjects('next')">
+            &#10095;
+          </button>
         </div>
-        
       </section>
       <footer>
         <p>Built and designed by Daniel Su.</p>

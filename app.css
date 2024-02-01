@@ -151,7 +151,25 @@ a {
   padding: 22px;
 }
 
+.projects-controller{
+  display: flex;
+}
 
+.projects-controller button {
+  border: none;
+  background-color: transparent;
+  color: rgb(106, 106, 106);
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+ 
+  transition: 0.2s;
+  transition: color 0.3s;
+}
+
+.projects-controller button:hover {
+  color: white;
+}
 .projects-container {
   display: flex;
   flex-wrap: wrap;
