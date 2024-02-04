@@ -465,6 +465,26 @@ body {
   nav div {
     width: 87%;
   }
+.projects-rect{
+  width: 37vw;
+  margin: 0.5em 0.3em 0em 0.3em;
+}
+.projects-rect img{
+  height: 8em;;
+}
+.projects-rect h3 {
+  margin-top: 0.8em;
+  margin-bottom: 0.4em;
+  font-size: 13pt;
+}
+.projects-rect p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-size: 10pt;
+}
+.projects-controller button {
+  padding: 0.8vw;
+}
 }
 
 /* Medium devices (landscape tablets, 900px and up) */
@@ -483,11 +503,6 @@ body {
 }
 
 
-.projects-rect div {
-  color: white;
-  margin-left: 1.2em;
-  margin-right: 1.2em;
-}
 .divider {
   height: 2px;
   width: 16em;
