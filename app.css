@@ -83,6 +83,9 @@ nav div {
 .links {
   margin-top: 1.6em;
 }
+.art {
+  display: none;
+}
 
 a {
   text-decoration: none;
@@ -506,6 +509,9 @@ body {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .art {
+    display:contents;
+  }
   nav {
     display: none;
   }
